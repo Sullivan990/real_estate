@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'foundation-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'carmen'
 
 group :doc do
   gem 'sdoc', require: false
