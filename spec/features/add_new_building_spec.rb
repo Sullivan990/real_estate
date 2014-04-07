@@ -1,6 +1,6 @@
-require 'spec-helper'
+require 'spec_helper'
 
-feature "submit a new building record", %Q{
+feature 'submit a new building record', %Q{
   As a user
   I want to be able to add a building to the database
   So I can record and keep list of the buildings.
@@ -16,9 +16,10 @@ feature "submit a new building record", %Q{
 
   scenario 'a user submits a valid building record' do
     visit new_building_path
+    save_and_open_page
 
-    fill_in 'Street Address', with: '9 Lakeshore Drive'
-    fill_in 'City', with: 'Medway'
+    fill_in 'Street Address', with: '32 Lakeshore Drive'
+    fill_in 'City', with: 'Norfolk'
     page.select 'MA', from: 'State'
     fill_in 'Postal Code', with: '02053'
 
