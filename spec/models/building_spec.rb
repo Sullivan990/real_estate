@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Building do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "Should have a street address"
+  it "Should have a city"
+  it "should have a state"
+  it "should have a postal code"
 end
