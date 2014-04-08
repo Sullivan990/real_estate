@@ -1,8 +1,11 @@
 require 'spec_helper'
 
 describe Building do
-  it "Should have a street address"
-  it "Should have a city"
-  it "should have a state"
-  it "should have a postal code"
+  it { should validate_presence_of :street_address }
+  it { should validate_presence_of :city }
+  it { should validate_presence_of :state }
+  it { should validate_presence_of :postal_code }
+
+  it { should have_valid(:state).when("MA", "NH") }
+  it { should_not have_valid(:state).when("Mass", "MB") }
 end
