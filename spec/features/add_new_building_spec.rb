@@ -27,6 +27,13 @@ feature "submit a new building record", %Q{
     expect(Building.count).to eq(1)
   end
 
-  scenario 'a user submits an invalid building record'
+  scenario 'a user submits an invalid building record' do
+    visit new_building_path
+
+    click_button 'Add Building'
+
+    expect(page).to have_content "can't be blank"
+    expect(Building.count).to eq(0)
+  end
 
 end
