@@ -22,8 +22,9 @@ feature "submit a new building record", %Q{
     page.select 'MA', from: 'State'
     fill_in 'Postal Code', with: '02053'
 
-    click_link 'Submit'
-    expect(page).to have_content 'Building Successfully Added'
+    click_button 'Add Building'
+    expect(page).to have_content 'Building successfully added.'
+    expect(Building.count).to eq(1)
   end
 
   scenario 'a user submits an invalid building record'
