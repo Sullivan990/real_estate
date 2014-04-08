@@ -21,6 +21,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl'
+  gem 'capybara'
   gem 'shoulda'
   gem 'valid_attribute'
 end

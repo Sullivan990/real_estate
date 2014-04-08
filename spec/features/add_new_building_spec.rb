@@ -1,4 +1,4 @@
-require 'spec-helper'
+require 'spec_helper'
 
 feature "submit a new building record", %Q{
   As a user
