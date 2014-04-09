@@ -19,7 +19,7 @@ feature "submit a new building record", %Q{
 
     fill_in 'Street Address', with: '9 Lakeshore Drive'
     fill_in 'City', with: 'Medway'
-    page.select 'MA', from: 'State'
+    fill_in 'State', with: 'MA'
     fill_in 'Postal Code', with: '02053'
 
     click_button 'Add Building'
