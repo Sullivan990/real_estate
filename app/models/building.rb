@@ -15,4 +15,6 @@ class Building < ActiveRecord::Base
   validates :state, presence: true, inclusion: { in: Building.states }
   validates :postal_code, presence: true
 
+  belongs_to :owner
+
 end

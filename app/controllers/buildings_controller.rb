@@ -5,7 +5,7 @@ class BuildingsController < ApplicationController
 
   def create
     @building = Building.new(params.require(:building)
-        .permit(:street_address, :city, :state, :postal_code))
+        .permit(:street_address, :city, :state, :postal_code, :owner_id))
 
     if @building.save
       redirect_to new_building_path, notice: 'Building successfully added.'

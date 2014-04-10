@@ -15,12 +15,14 @@ feature "submit a new building record", %Q{
   # * Upon successfully creating a building, I am redirected so that I can record another building.
 
   scenario 'a user submits a valid building record' do
+    # owner = FactoryGirl.build(:owner)
     visit new_building_path
 
     fill_in 'Street Address', with: '9 Lakeshore Drive'
     fill_in 'City', with: 'Medway'
     fill_in 'State', with: 'MA'
     fill_in 'Postal Code', with: '02053'
+    select 'Daniel Craig', from: 'Owners'
 
     click_button 'Add Building'
     expect(page).to have_content 'Building successfully added.'
